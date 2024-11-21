@@ -29,9 +29,9 @@ Controller DHCP config `/etc/dhcp/dhcpd.conf`
 ```
 subnet 192.168.69.0 netmask 255.255.255.0 {
   range 192.168.69.2 192.168.69.254;
-  option domain-name-servers “cometstar.net.id”;
-  option domain-name “cometstar.net.id”;
-# option routers 192.168.69.1;
+  option domain-name-servers 192.168.69.1,192.168.69.2;
+# option domain-name “cometstar.net.id”;
+  option routers 192.168.69.1;
   option broadcast-address 192.168.69.255;
   default-lease-time 600;
 }
